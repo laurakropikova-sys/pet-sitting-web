@@ -7,86 +7,115 @@
 
 <style>
 body{
-font-family:ADLaM Display,sans-serif;
+font-family: Arial, sans-serif;
 margin:0;
 padding:0;
 background:#f5f5f5;
+color:#111;
 }
 
+/* HEADER */
 header{
-background:#f5f5f5;
-color:white;
 text-align:center;
-padding:60px 20px;
+padding:70px 20px;
+background:#f5f5f5;
 }
 
+h1{
+font-size:52px;
+color:#0B1325;
+margin-bottom:10px;
+}
+
+p{
+font-size:18px;
+color:#333;
+}
+
+a{
+display:inline-block;
+margin-top:20px;
+background:#0B1325;
+color:white;
+padding:12px 22px;
+border-radius:10px;
+text-decoration:none;
+}
+
+/* SECTIONS */
 section{
-max-width:1000px;
+max-width:900px;
 margin:auto;
 padding:40px 20px;
 }
 
+/* BOXY */
 .card{
 background:white;
 padding:20px;
-border-radius:12px;
+border-radius:14px;
 margin-bottom:20px;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
 }
 
+/* FORM */
+input, select, textarea{
+width:100%;
+padding:10px;
+margin-top:5px;
+margin-bottom:15px;
+border-radius:10px;
+border:1px solid #ddd;
+}
+
+/* BUTTON */
 button{
-background:#7A6B58;
+background:#0B1325;
 color:white;
 border:none;
 padding:12px 24px;
-border-radius:8px;
+border-radius:10px;
 cursor:pointer;
+width:100%;
 }
 
-<section id="rezervace">
-  <div class="card">
-    <h2>Rezervace</h2>
+/* PRICE */
+.price{
+background:white;
+padding:20px;
+border-radius:14px;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+margin-bottom:20px;
+}
 
-    <form>
-      <label>Jméno</label><br>
-      <input type="text" required><br><br>
-
-      <label>Datum návštěvy</label><br>
-      <input type="date" required><br><br>
-
-      <label>Adresa</label><br>
-      <input type="text" required><br><br>
-
-      <label>Poznámka</label><br>
-      <textarea></textarea><br><br>
-
-      <button type="submit">Odeslat rezervaci</button>
-    </form>
-  </div>
-</section>footer{
-background:#333;
+/* FOOTER */
+footer{
+background:#111;
 color:white;
 text-align:center;
 padding:20px;
+margin-top:40px;
 }
 </style>
 
 </head>
+
 <body>
 
+<!-- HEADER -->
 <header>
-<h1> TLAPKA DOMA</h1>
+<h1>TLAPKA DOMA</h1>
 <p>Hlídání mazlíčků u vás doma</p>
 <a href="#rezervace">Rezervovat</a>
 </header>
 
+<!-- INFO -->
 <section>
 
 <div class="card">
 <h2>O službě</h2>
 <p>
-Přijedu k vám domů, nakrmím vašeho mazlíčka,
-pohraju si s ním, vyvenčím ho a pošlu fotky.
+Postarám se o vaše mazlíčky u vás doma – krmení, venčení, hraní i péče.
 </p>
 </div>
 
@@ -95,20 +124,72 @@ pohraju si s ním, vyvenčím ho a pošlu fotky.
 <ul>
 <li>Krmení</li>
 <li>Venčení</li>
-<li>Hraní a mazlení</li>
-<li>Kontrola zdravotního stavu</li>
-<li>Fotky a zprávy pro majitele</li>
+<li>Hraní</li>
+<li>Péče o mazlíčka</li>
 </ul>
+</div>
+
+<div class="price">
+<h2>Ceník</h2>
+<p><b>Pes:</b> krmení + 1h hraní + venčení → 400 Kč</p>
+<p><b>Kočka:</b> krmení + 30 min hraní → 300 Kč</p>
 </div>
 
 <div class="card">
 <h2>Kontakt</h2>
-<p>Email: laura.kropikova@email.cz</p>
+<p>Email: tlapkadoma.zaviac@gmail.com</p>
 <p>Instagram: @tlapkadoma</p>
 </div>
 
 </section>
 
+<!-- REZERVACE -->
+<section id="rezervace">
+
+<div class="card">
+<h2>Rezervace</h2>
+
+<form>
+
+<label>Jméno</label>
+<input type="text" required>
+
+<label>Telefon</label>
+<input type="tel" required>
+
+<label>Email</label>
+<input type="email" required>
+
+<label>Od kdy</label>
+<input type="date" required>
+
+<label>Do kdy</label>
+<input type="date" required>
+
+<label>Typ mazlíčka</label>
+<select>
+<option>Pes</option>
+<option>Kočka</option>
+</select>
+
+<label>Typ služby</label>
+<select>
+<option>Pes – 400 Kč</option>
+<option>Kočka – 300 Kč</option>
+</select>
+
+<label>Poznámka</label>
+<textarea></textarea>
+
+<button type="submit">Odeslat rezervaci</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
 <footer>
 © 2025 Tlapka Doma
 </footer>
